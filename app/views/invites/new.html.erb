@@ -1,0 +1,7 @@
+<%= form_for @user do |f| %>
+  <%= f.text_field :name %>
+  <%= f.hidden_field :event_id, :value => @event.id %>
+
+  <%= f.submit "Invite to #{@event.name}" %>
+<% end %>
+

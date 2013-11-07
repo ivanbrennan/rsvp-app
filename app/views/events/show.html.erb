@@ -1,2 +1,12 @@
 <h3><%= @event.name %></h3><br>
+<h4>Invited users</h4>
+
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Invite a user", new_event_invite_path(@event) %><br>
+
 <%= link_to "Index", events_path %>
